@@ -1,6 +1,10 @@
-# 
+# OAuth 2.0 Resource Server with Spring Security
 
-Overview
+Spring Security OAuth2 Boot simplifies protecting your resources using Bearer Token authentication.
+
+- Two different token formats:
+  - JWT
+  - Opaque
 
 ## Description
 
@@ -20,6 +24,7 @@ Overview
 ## References
 
 - [Spring Security OAuth 2.0](https://docs.spring.io/spring-security-oauth2-boot/docs/current/reference/html5/)
+- [OAuth 2 Developers Guide](https://projects.spring.io/spring-security-oauth/docs/oauth2.html)
 
 ## Licence
 
