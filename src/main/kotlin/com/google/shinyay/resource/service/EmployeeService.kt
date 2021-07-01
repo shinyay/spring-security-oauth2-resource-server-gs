@@ -14,7 +14,13 @@ class EmployeeService(val repository: EmployeeRepository) {
         return repository.findById(id)
     }
 
-    fun saveEmployee(employee: Employee) = repository.save(employee)
+    fun saveEmployee(employee: Employee): Employee {
+        logger.info("Employee: $employee")
+        return repository.save(employee)
+    }
 
-    fun removeEmployee(id: Long) = repository.deleteById(id)
+    fun removeEmployee(id: Long) {
+        logger.info("Employee ID: $id")
+        return repository.deleteById(id)
+    }
 }
