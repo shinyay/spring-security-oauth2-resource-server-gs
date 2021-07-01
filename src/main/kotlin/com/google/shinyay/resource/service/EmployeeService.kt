@@ -9,6 +9,8 @@ import java.util.*
 @Service
 class EmployeeService(val repository: EmployeeRepository) {
 
+    fun findAll(): MutableIterable<Employee> = repository.findAll()
+
     fun findEmployeeById(id: Long): Optional<Employee> {
         logger.info("Employee ID: $id")
         return repository.findById(id)
