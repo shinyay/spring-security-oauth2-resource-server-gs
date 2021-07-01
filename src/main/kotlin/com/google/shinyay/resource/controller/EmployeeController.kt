@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping("/api/v1")
 class EmployeeController(val service: EmployeeService) {
 
-    @GetMapping("/employee/{id}")
+    @GetMapping("/employees")
+    fun findAll() = service.findAll()
+
+    @GetMapping("/employees/{id}")
     fun findOne(@PathVariable id: Long): Employee = service.findEmployeeById(id).orElseThrow { EmployeeNotFoundException(id) }
 }
