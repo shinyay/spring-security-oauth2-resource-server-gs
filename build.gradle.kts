@@ -7,6 +7,13 @@ plugins {
 	kotlin("plugin.spring") version "1.5.20"
 	kotlin("plugin.jpa") version "1.5.20"
 	kotlin("plugin.noarg") version "1.5.20"
+	kotlin("plugin.allopen") version "1.5.20"
+}
+
+allOpen {
+	annotation("javax.persistence.Entity")
+	annotation("javax.persistence.Embeddable")
+	annotation("javax.persistence.MappedSuperclass")
 }
 
 group = "com.google.shinyay.resource"
