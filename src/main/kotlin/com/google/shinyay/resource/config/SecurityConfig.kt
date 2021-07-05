@@ -11,11 +11,12 @@ class SecurityConfig : WebSecurityConfigurerAdapter() {
         http
             ?.cors()
             ?.and()
-            ?.authorizeRequests()
-            ?.antMatchers(HttpMethod.GET, "/api/v1/employees/**")?.hasAuthority("SCOPE_read")
-            ?.antMatchers(HttpMethod.POST, "/api/v1/employees")?.hasAuthority("SCOPE_write")
-            ?.anyRequest()?.authenticated()
-            ?.and()
-            ?.oauth2ResourceServer {oauth2 -> oauth2.jwt()}
+            ?.authorizeRequests { authz ->
+                authz
+                    .antMatchers(HttpMethod.GET, "/api/v1/employees/**").hasAuthority("SCOPE_read")
+                    .antMatchers(HttpMethod.POST, "/api/v1/employees").hasAuthority("SCOPE_write")
+                    .anyRequest().authenticated()
+            }
+            ?.oauth2ResourceServer { oauth2 -> oauth2.jwt() }
     }
 }
