@@ -18,5 +18,5 @@ class EmployeeController(val service: EmployeeService) {
 
     @PostMapping("/employees")
     @ResponseStatus(HttpStatus.CREATED)
-    fun registerEmployee(employee: Employee) = service.saveEmployee(employee)
+    fun registerEmployee(@RequestBody employee: Employee) = service.saveEmployee(employee)
 }
