@@ -12,6 +12,13 @@ spring:
         trace: false
         web-allow-others: true
         web-admin-password: passw0rd
+  sql:
+    init:
+      platform: h2 # hsqldb oracle mysql postgresql
+      encoding: utf-8
+      mode: embedded # always embedded never
+      #schema-locations: classpath:my-schema.sql # schema-${platform}.sql
+      #data-locations: classpath:my-data.sql # data-${platform}.sql
   jpa:
     hibernate:
       ddl-auto: create-drop
