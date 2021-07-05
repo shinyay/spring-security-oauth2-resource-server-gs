@@ -30,7 +30,12 @@ spring:
         dialect: org.hibernate.dialect.H2Dialect
         use_sql_comments: true
         format_sql: true
-
+##### Resource Server Configuration
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8083/auth/realms/shinyay
 server:
   port: 8081
   servlet:
