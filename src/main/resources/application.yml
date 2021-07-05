@@ -7,9 +7,13 @@ spring:
   h2:
     console:
       enabled: true
+      path: /h2
+      settings:
+        trace: false
+        web-allow-others: true
+        web-admin-password: passw0rd
   jpa:
     hibernate:
-      #ddl-auto: update
       ddl-auto: create-drop
       #ddl-auto: none
     show-sql: true
