@@ -7,6 +7,9 @@ Spring Security OAuth2 Boot simplifies protecting your resources using Bearer To
   - Opaque
 
 ## Description
+### Dependencies
+- org.springframework.boot
+  - `spring-boot-starter-oauth2-resource-server`
 
 ## Demo
 
