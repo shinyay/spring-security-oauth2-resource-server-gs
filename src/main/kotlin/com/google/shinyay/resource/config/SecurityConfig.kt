@@ -16,6 +16,6 @@ class SecurityConfig : WebSecurityConfigurerAdapter() {
             ?.antMatchers(HttpMethod.POST, "/api/v1/employees")?.hasAuthority("SCOPE_write")
             ?.anyRequest()?.authenticated()
             ?.and()
-            ?.oauth2ResourceServer()?.jwt()
+            ?.oauth2ResourceServer {oauth2 -> oauth2.jwt()}
     }
 }
