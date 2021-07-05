@@ -5,7 +5,7 @@ import javax.persistence.*
 @Entity
 data class Employee(
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long,
-    var name: String
+    val name: String
 )
