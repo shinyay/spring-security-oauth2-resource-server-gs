@@ -56,6 +56,10 @@ Retrieve Access Token
 $ set -x TOKEN (curl -X POST "http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/token" --data "grant_type=client_credentials&client_secret=$CLIENT_SECRET&client_id=shinyay-api"|jq -r .access_token)
 ```
 
+POST Data with Access Token
+```shell
+$ curl -v -X POST -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" -d '{"name":"oauth2"}' localhost:8081/resource-server/api/v1/employees
+```
 
 ## Features
 
