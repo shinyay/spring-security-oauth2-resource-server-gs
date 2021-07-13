@@ -68,6 +68,11 @@ fun configure(http: HttpSecurity?) {
 }
 ```
 
+**read** and **write** scope
+![client-scope](https://user-images.githubusercontent.com/3072734/125379261-2a270a80-e3cb-11eb-919b-6a658cc9d641.png)
+
+scope mapping to client
+![scope-mapping](https://user-images.githubusercontent.com/3072734/125379323-432fbb80-e3cb-11eb-88d9-5d27a472f090.png)
 
 ## Demo
 Retrieve Access Token
