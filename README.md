@@ -64,7 +64,6 @@ fun configure(http: HttpSecurity?) {
                 .antMatchers(HttpMethod.POST, "/api/v1/employees").hasAuthority("SCOPE_write")
                 .anyRequest().authenticated()
         }
-        ?.oauth2ResourceServer { oauth2 -> oauth2.jwt() }
 }
 ```
 
@@ -73,6 +72,14 @@ fun configure(http: HttpSecurity?) {
 
 scope mapping to client
 ![scope-mapping](https://user-images.githubusercontent.com/3072734/125379323-432fbb80-e3cb-11eb-88d9-5d27a472f090.png)
+
+oauth2ResourceServer() DSL to indicate the type of tokens
+```kotlin
+fun configure(http: HttpSecurity?) {
+    http
+        ?.oauth2ResourceServer { oauth2 -> oauth2.jwt() }
+}
+```
 
 ## Demo
 Retrieve Access Token
