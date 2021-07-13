@@ -15,7 +15,22 @@ Spring Security OAuth2 Boot simplifies protecting your resources using Bearer To
 - `spring.security.oauth2.resourceserver.jwt.issuer-uri`
   - The URI that it asserts as its Issuer Identifier
   - Authorization Server's endpoint
+  - **issuer** from the following JSON
 
+```shell
+$ curl -X GET http://localhost:8083/auth/realms/shinyay/.well-known/openid-configuration| jq .
+```
+```json
+{
+  "issuer": "http://localhost:8083/auth/realms/shinyay",
+  "authorization_endpoint": "http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/auth",
+  "token_endpoint": "http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/token",
+  "introspection_endpoint": "http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/token/introspect",
+  "userinfo_endpoint": "http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/userinfo",
+  "end_session_endpoint": "http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/logout",
+  "jwks_uri": "http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/certs",
+  "check_session_iframe": "http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/login-status-iframe.html"
+```
 
 ```yaml
 spring:
