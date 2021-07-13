@@ -11,6 +11,21 @@ Spring Security OAuth2 Boot simplifies protecting your resources using Bearer To
 - org.springframework.boot
   - `spring-boot-starter-oauth2-resource-server`
 
+### Application Configuration
+- `spring.security.oauth2.resourceserver.jwt.issuer-uri`
+  - The URI that it asserts as its Issuer Identifier
+  - Authorization Server's endpoint
+
+
+```yaml
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8083/auth/realms/shinyay
+          jwk-set-uri: http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/certs
+```
 ## Demo
 
 ## Features
