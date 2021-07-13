@@ -82,6 +82,14 @@ fun configure(http: HttpSecurity?) {
 ```
 
 ## Demo
+### Prepare Environment
+- Authorization Server
+  - [shinyay/spring-keycloak-authz-server](https://github.com/shinyay/spring-keycloak-authz-server)
+- Resource Server
+  - [shinyay/spring-security-oauth2-resource-server-gs](https://github.com/shinyay/spring-security-oauth2-resource-server-gs)
+- OAuth2.0 Client
+  - [shinyay/spring-security-oauth2-client-for-keycloak](https://github.com/shinyay/spring-security-oauth2-client-for-keycloak)
+
 Retrieve Access Token
 ```shell
 $ set -x TOKEN (curl -X POST "http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/token" --data "grant_type=client_credentials&client_secret=$CLIENT_SECRET&client_id=shinyay-api"|jq -r .access_token)
