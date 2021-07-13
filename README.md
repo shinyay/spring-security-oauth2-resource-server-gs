@@ -96,6 +96,11 @@ GET Data with Access Token
 ```shell
 $ curl -v -X GET -H "Authorization: Bearer $TOKEN" localhost:8081/resource-server/api/v1/employees
 ```
+
+### JWT.io
+You can check KWT contents:
+- https://jwt.io/
+
 ## Features
 
 - feature:1
