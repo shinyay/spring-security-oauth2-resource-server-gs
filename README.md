@@ -50,6 +50,25 @@ spring:
 ### Security Configuration
 Security configuration class which extends WebSecurityConfigurerAdapter class
 
+- Access with `read scope`
+  - `hasAuthority("SCOPE_read")`
+- Access with `write scope`
+  - `hasAuthority("SCOPE_write")`
+
+```kotlin
+fun configure(http: HttpSecurity?) {
+    http
+        ?.authorizeRequests { authz ->
+            authz
+                .antMatchers(HttpMethod.GET, "/api/v1/employees/**").hasAuthority("SCOPE_read")
+                .antMatchers(HttpMethod.POST, "/api/v1/employees").hasAuthority("SCOPE_write")
+                .anyRequest().authenticated()
+        }
+        ?.oauth2ResourceServer { oauth2 -> oauth2.jwt() }
+}
+```
+
+
 ## Demo
 Retrieve Access Token
 ```shell
