@@ -61,6 +61,10 @@ POST Data with Access Token
 $ curl -v -X POST -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" -d '{"name":"oauth2"}' localhost:8081/resource-server/api/v1/employees
 ```
 
+GET Data with Access Token
+```shell
+$ curl -v -X GET -H "Authorization: Bearer $TOKEN" localhost:8081/resource-server/api/v1/employees
+```
 ## Features
 
 - feature:1
