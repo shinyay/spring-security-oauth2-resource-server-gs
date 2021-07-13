@@ -111,6 +111,7 @@ $ curl -v -X GET -H "Authorization: Bearer $TOKEN" localhost:8081/resource-serve
 
 - [Spring Security OAuth 2.0](https://docs.spring.io/spring-security-oauth2-boot/docs/current/reference/html5/)
 - [OAuth 2 Developers Guide](https://projects.spring.io/spring-security-oauth/docs/oauth2.html)
+- [OAuth2 Boot - Resource Server](https://docs.spring.io/spring-security-oauth2-boot/docs/current/reference/html5/#boot-features-security-oauth2-resource-server)
 
 ## Licence
 
