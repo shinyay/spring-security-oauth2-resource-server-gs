@@ -111,6 +111,12 @@ Endpoint JSON Samples
 #### Application Configuration
 Spring Security configuration for Resource Server
 
+Spring Security and Google OAuth 2.0 Mapping
+|Spring Security|Google OAuth 2.0|
+|---------------|----------------|
+|issuer-uri|auth_uri|
+|jwk-set-uri|auth_provider_x509_cert_url|
+
 ```yaml
 spring:
   security:
