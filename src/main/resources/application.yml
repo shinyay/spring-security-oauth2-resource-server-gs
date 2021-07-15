@@ -37,6 +37,8 @@ spring:
         jwt:
           issuer-uri: http://localhost:8083/auth/realms/shinyay
           jwk-set-uri: http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/certs
+          # issuer-uri: https://accounts.google.com/o/oauth2/auth
+          # jwk-set-uri: https://www.googleapis.com/oauth2/v1/certs
 server:
   port: 8081
   servlet:
