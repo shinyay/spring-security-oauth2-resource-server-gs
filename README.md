@@ -108,6 +108,18 @@ Endpoint JSON Samples
 }
 ```
 
+#### Application Configuration
+Spring Security configuration for Resource Server
+
+```yaml
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://accounts.google.com/o/oauth2/auth
+          jwk-set-uri: https://www.googleapis.com/oauth2/v1/certs
+```
 
 ## Demo
 ### Prepare Environment
